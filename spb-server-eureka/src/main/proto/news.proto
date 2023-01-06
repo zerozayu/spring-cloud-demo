@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.zhangyu.news.proto";
+option java_outer_classname = "NewProto";
+
+package news;
+
+service NewService {
+  rpc listNews(NewsRequest) returns(NewsResponse){};
+}
+
+message NewsRequest {
+  string name = 1;
+}
+
+message NewsResponse {
+  string result = 1;
+}
