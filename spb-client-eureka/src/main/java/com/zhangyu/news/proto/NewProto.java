@@ -22,7 +22,7 @@ public final class NewProto {
      * <code>string name = 1;</code>
      * @return The name.
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 1;</code>
      * @return The bytes for name.
@@ -46,14 +46,14 @@ public final class NewProto {
       name_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new NewsRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -64,7 +64,7 @@ public final class NewProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -77,7 +77,7 @@ public final class NewProto {
               done = true;
               break;
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -105,32 +105,32 @@ public final class NewProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return NewProto.internal_static_news_NewsRequest_descriptor;
+      return com.zhangyu.news.proto.NewProto.internal_static_news_NewsRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return NewProto.internal_static_news_NewsRequest_fieldAccessorTable
+      return com.zhangyu.news.proto.NewProto.internal_static_news_NewsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              NewsRequest.class, Builder.class);
+              com.zhangyu.news.proto.NewProto.NewsRequest.class, com.zhangyu.news.proto.NewProto.NewsRequest.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
      * @return The name.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -139,14 +139,14 @@ public final class NewProto {
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -155,7 +155,7 @@ public final class NewProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -165,7 +165,7 @@ public final class NewProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -174,7 +174,7 @@ public final class NewProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -188,15 +188,15 @@ public final class NewProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof NewsRequest)) {
+      if (!(obj instanceof com.zhangyu.news.proto.NewProto.NewsRequest)) {
         return super.equals(obj);
       }
-      NewsRequest other = (NewsRequest) obj;
+      com.zhangyu.news.proto.NewProto.NewsRequest other = (com.zhangyu.news.proto.NewProto.NewsRequest) obj;
 
       if (!getName()
           .equals(other.getName())) return false;
@@ -204,7 +204,7 @@ public final class NewProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -218,69 +218,69 @@ public final class NewProto {
       return hash;
     }
 
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NewsRequest parseFrom(byte[] data)
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NewsRequest parseFrom(java.io.InputStream input)
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static NewsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static NewsRequest parseDelimitedFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static NewsRequest parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -288,23 +288,23 @@ public final class NewProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(NewsRequest prototype) {
+    public static Builder newBuilder(com.zhangyu.news.proto.NewProto.NewsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -314,18 +314,18 @@ public final class NewProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:news.NewsRequest)
-        NewsRequestOrBuilder {
+        com.zhangyu.news.proto.NewProto.NewsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return NewProto.internal_static_news_NewsRequest_descriptor;
+        return com.zhangyu.news.proto.NewProto.internal_static_news_NewsRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return NewProto.internal_static_news_NewsRequest_fieldAccessorTable
+        return com.zhangyu.news.proto.NewProto.internal_static_news_NewsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                NewsRequest.class, Builder.class);
+                com.zhangyu.news.proto.NewProto.NewsRequest.class, com.zhangyu.news.proto.NewProto.NewsRequest.Builder.class);
       }
 
       // Construct using com.zhangyu.news.proto.NewProto.NewsRequest.newBuilder()
@@ -334,7 +334,7 @@ public final class NewProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -343,7 +343,7 @@ public final class NewProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -351,78 +351,78 @@ public final class NewProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return NewProto.internal_static_news_NewsRequest_descriptor;
+        return com.zhangyu.news.proto.NewProto.internal_static_news_NewsRequest_descriptor;
       }
 
-      @Override
-      public NewsRequest getDefaultInstanceForType() {
-        return NewsRequest.getDefaultInstance();
+      @java.lang.Override
+      public com.zhangyu.news.proto.NewProto.NewsRequest getDefaultInstanceForType() {
+        return com.zhangyu.news.proto.NewProto.NewsRequest.getDefaultInstance();
       }
 
-      @Override
-      public NewsRequest build() {
-        NewsRequest result = buildPartial();
+      @java.lang.Override
+      public com.zhangyu.news.proto.NewProto.NewsRequest build() {
+        com.zhangyu.news.proto.NewProto.NewsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public NewsRequest buildPartial() {
-        NewsRequest result = new NewsRequest(this);
+      @java.lang.Override
+      public com.zhangyu.news.proto.NewProto.NewsRequest buildPartial() {
+        com.zhangyu.news.proto.NewProto.NewsRequest result = new com.zhangyu.news.proto.NewProto.NewsRequest(this);
         result.name_ = name_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof NewsRequest) {
-          return mergeFrom((NewsRequest)other);
+        if (other instanceof com.zhangyu.news.proto.NewProto.NewsRequest) {
+          return mergeFrom((com.zhangyu.news.proto.NewProto.NewsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(NewsRequest other) {
-        if (other == NewsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.zhangyu.news.proto.NewProto.NewsRequest other) {
+        if (other == com.zhangyu.news.proto.NewProto.NewsRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -432,21 +432,21 @@ public final class NewProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        NewsRequest parsedMessage = null;
+        com.zhangyu.news.proto.NewProto.NewsRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (NewsRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.zhangyu.news.proto.NewProto.NewsRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -456,21 +456,21 @@ public final class NewProto {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -479,11 +479,11 @@ public final class NewProto {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -496,7 +496,7 @@ public final class NewProto {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -531,13 +531,13 @@ public final class NewProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -548,18 +548,18 @@ public final class NewProto {
     }
 
     // @@protoc_insertion_point(class_scope:news.NewsRequest)
-    private static final NewsRequest DEFAULT_INSTANCE;
+    private static final com.zhangyu.news.proto.NewProto.NewsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new NewsRequest();
+      DEFAULT_INSTANCE = new com.zhangyu.news.proto.NewProto.NewsRequest();
     }
 
-    public static NewsRequest getDefaultInstance() {
+    public static com.zhangyu.news.proto.NewProto.NewsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<NewsRequest>
         PARSER = new com.google.protobuf.AbstractParser<NewsRequest>() {
-      @Override
+      @java.lang.Override
       public NewsRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -572,13 +572,13 @@ public final class NewProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<NewsRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public NewsRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.zhangyu.news.proto.NewProto.NewsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -592,7 +592,7 @@ public final class NewProto {
      * <code>string result = 1;</code>
      * @return The result.
      */
-    String getResult();
+    java.lang.String getResult();
     /**
      * <code>string result = 1;</code>
      * @return The bytes for result.
@@ -616,14 +616,14 @@ public final class NewProto {
       result_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
+    protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
       return new NewsResponse();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -634,7 +634,7 @@ public final class NewProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -647,7 +647,7 @@ public final class NewProto {
               done = true;
               break;
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               result_ = s;
               break;
@@ -675,32 +675,32 @@ public final class NewProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return NewProto.internal_static_news_NewsResponse_descriptor;
+      return com.zhangyu.news.proto.NewProto.internal_static_news_NewsResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return NewProto.internal_static_news_NewsResponse_fieldAccessorTable
+      return com.zhangyu.news.proto.NewProto.internal_static_news_NewsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              NewsResponse.class, Builder.class);
+              com.zhangyu.news.proto.NewProto.NewsResponse.class, com.zhangyu.news.proto.NewProto.NewsResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
-    private volatile Object result_;
+    private volatile java.lang.Object result_;
     /**
      * <code>string result = 1;</code>
      * @return The result.
      */
-    @Override
-    public String getResult() {
-      Object ref = result_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getResult() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         result_ = s;
         return s;
       }
@@ -709,14 +709,14 @@ public final class NewProto {
      * <code>string result = 1;</code>
      * @return The bytes for result.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResultBytes() {
-      Object ref = result_;
-      if (ref instanceof String) {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         result_ = b;
         return b;
       } else {
@@ -725,7 +725,7 @@ public final class NewProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -735,7 +735,7 @@ public final class NewProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
@@ -744,7 +744,7 @@ public final class NewProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -758,15 +758,15 @@ public final class NewProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof NewsResponse)) {
+      if (!(obj instanceof com.zhangyu.news.proto.NewProto.NewsResponse)) {
         return super.equals(obj);
       }
-      NewsResponse other = (NewsResponse) obj;
+      com.zhangyu.news.proto.NewProto.NewsResponse other = (com.zhangyu.news.proto.NewProto.NewsResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -774,7 +774,7 @@ public final class NewProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -788,69 +788,69 @@ public final class NewProto {
       return hash;
     }
 
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NewsResponse parseFrom(byte[] data)
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static NewsResponse parseFrom(java.io.InputStream input)
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static NewsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static NewsResponse parseDelimitedFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static NewsResponse parseFrom(
+    public static com.zhangyu.news.proto.NewProto.NewsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -858,23 +858,23 @@ public final class NewProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(NewsResponse prototype) {
+    public static Builder newBuilder(com.zhangyu.news.proto.NewProto.NewsResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -884,18 +884,18 @@ public final class NewProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:news.NewsResponse)
-        NewsResponseOrBuilder {
+        com.zhangyu.news.proto.NewProto.NewsResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return NewProto.internal_static_news_NewsResponse_descriptor;
+        return com.zhangyu.news.proto.NewProto.internal_static_news_NewsResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return NewProto.internal_static_news_NewsResponse_fieldAccessorTable
+        return com.zhangyu.news.proto.NewProto.internal_static_news_NewsResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                NewsResponse.class, Builder.class);
+                com.zhangyu.news.proto.NewProto.NewsResponse.class, com.zhangyu.news.proto.NewProto.NewsResponse.Builder.class);
       }
 
       // Construct using com.zhangyu.news.proto.NewProto.NewsResponse.newBuilder()
@@ -904,7 +904,7 @@ public final class NewProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -913,7 +913,7 @@ public final class NewProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         result_ = "";
@@ -921,78 +921,78 @@ public final class NewProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return NewProto.internal_static_news_NewsResponse_descriptor;
+        return com.zhangyu.news.proto.NewProto.internal_static_news_NewsResponse_descriptor;
       }
 
-      @Override
-      public NewsResponse getDefaultInstanceForType() {
-        return NewsResponse.getDefaultInstance();
+      @java.lang.Override
+      public com.zhangyu.news.proto.NewProto.NewsResponse getDefaultInstanceForType() {
+        return com.zhangyu.news.proto.NewProto.NewsResponse.getDefaultInstance();
       }
 
-      @Override
-      public NewsResponse build() {
-        NewsResponse result = buildPartial();
+      @java.lang.Override
+      public com.zhangyu.news.proto.NewProto.NewsResponse build() {
+        com.zhangyu.news.proto.NewProto.NewsResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public NewsResponse buildPartial() {
-        NewsResponse result = new NewsResponse(this);
+      @java.lang.Override
+      public com.zhangyu.news.proto.NewProto.NewsResponse buildPartial() {
+        com.zhangyu.news.proto.NewProto.NewsResponse result = new com.zhangyu.news.proto.NewProto.NewsResponse(this);
         result.result_ = result_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof NewsResponse) {
-          return mergeFrom((NewsResponse)other);
+        if (other instanceof com.zhangyu.news.proto.NewProto.NewsResponse) {
+          return mergeFrom((com.zhangyu.news.proto.NewProto.NewsResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(NewsResponse other) {
-        if (other == NewsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.zhangyu.news.proto.NewProto.NewsResponse other) {
+        if (other == com.zhangyu.news.proto.NewProto.NewsResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           onChanged();
@@ -1002,21 +1002,21 @@ public final class NewProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        NewsResponse parsedMessage = null;
+        com.zhangyu.news.proto.NewProto.NewsResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (NewsResponse) e.getUnfinishedMessage();
+          parsedMessage = (com.zhangyu.news.proto.NewProto.NewsResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1026,21 +1026,21 @@ public final class NewProto {
         return this;
       }
 
-      private Object result_ = "";
+      private java.lang.Object result_ = "";
       /**
        * <code>string result = 1;</code>
        * @return The result.
        */
-      public String getResult() {
-        Object ref = result_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getResult() {
+        java.lang.Object ref = result_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           result_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1049,11 +1049,11 @@ public final class NewProto {
        */
       public com.google.protobuf.ByteString
           getResultBytes() {
-        Object ref = result_;
+        java.lang.Object ref = result_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           result_ = b;
           return b;
         } else {
@@ -1066,7 +1066,7 @@ public final class NewProto {
        * @return This builder for chaining.
        */
       public Builder setResult(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1101,13 +1101,13 @@ public final class NewProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1118,18 +1118,18 @@ public final class NewProto {
     }
 
     // @@protoc_insertion_point(class_scope:news.NewsResponse)
-    private static final NewsResponse DEFAULT_INSTANCE;
+    private static final com.zhangyu.news.proto.NewProto.NewsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new NewsResponse();
+      DEFAULT_INSTANCE = new com.zhangyu.news.proto.NewProto.NewsResponse();
     }
 
-    public static NewsResponse getDefaultInstance() {
+    public static com.zhangyu.news.proto.NewProto.NewsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<NewsResponse>
         PARSER = new com.google.protobuf.AbstractParser<NewsResponse>() {
-      @Override
+      @java.lang.Override
       public NewsResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1142,13 +1142,13 @@ public final class NewProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<NewsResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public NewsResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.zhangyu.news.proto.NewProto.NewsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1172,7 +1172,7 @@ public final class NewProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\nnews.proto\022\004news\"\033\n\013NewsRequest\022\014\n\004nam" +
       "e\030\001 \001(\t\"\036\n\014NewsResponse\022\016\n\006result\030\001 \001(\t2" +
       "A\n\nNewService\0223\n\010listNews\022\021.news.NewsReq" +
@@ -1188,13 +1188,13 @@ public final class NewProto {
     internal_static_news_NewsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_news_NewsRequest_descriptor,
-        new String[] { "Name", });
+        new java.lang.String[] { "Name", });
     internal_static_news_NewsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_news_NewsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_news_NewsResponse_descriptor,
-        new String[] { "Result", });
+        new java.lang.String[] { "Result", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

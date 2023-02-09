@@ -15,29 +15,29 @@ public final class NewServiceGrpc {
   public static final String SERVICE_NAME = "news.NewService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<NewProto.NewsRequest,
-      NewProto.NewsResponse> getListNewsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.zhangyu.news.proto.NewProto.NewsRequest,
+      com.zhangyu.news.proto.NewProto.NewsResponse> getListNewsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "listNews",
-      requestType = NewProto.NewsRequest.class,
-      responseType = NewProto.NewsResponse.class,
+      requestType = com.zhangyu.news.proto.NewProto.NewsRequest.class,
+      responseType = com.zhangyu.news.proto.NewProto.NewsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<NewProto.NewsRequest,
-      NewProto.NewsResponse> getListNewsMethod() {
-    io.grpc.MethodDescriptor<NewProto.NewsRequest, NewProto.NewsResponse> getListNewsMethod;
+  public static io.grpc.MethodDescriptor<com.zhangyu.news.proto.NewProto.NewsRequest,
+      com.zhangyu.news.proto.NewProto.NewsResponse> getListNewsMethod() {
+    io.grpc.MethodDescriptor<com.zhangyu.news.proto.NewProto.NewsRequest, com.zhangyu.news.proto.NewProto.NewsResponse> getListNewsMethod;
     if ((getListNewsMethod = NewServiceGrpc.getListNewsMethod) == null) {
       synchronized (NewServiceGrpc.class) {
         if ((getListNewsMethod = NewServiceGrpc.getListNewsMethod) == null) {
           NewServiceGrpc.getListNewsMethod = getListNewsMethod =
-              io.grpc.MethodDescriptor.<NewProto.NewsRequest, NewProto.NewsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.zhangyu.news.proto.NewProto.NewsRequest, com.zhangyu.news.proto.NewProto.NewsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listNews"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  NewProto.NewsRequest.getDefaultInstance()))
+                  com.zhangyu.news.proto.NewProto.NewsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  NewProto.NewsResponse.getDefaultInstance()))
+                  com.zhangyu.news.proto.NewProto.NewsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new NewServiceMethodDescriptorSupplier("listNews"))
               .build();
         }
@@ -52,7 +52,7 @@ public final class NewServiceGrpc {
   public static NewServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<NewServiceStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<NewServiceStub>() {
-        @Override
+        @java.lang.Override
         public NewServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new NewServiceStub(channel, callOptions);
         }
@@ -67,7 +67,7 @@ public final class NewServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<NewServiceBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<NewServiceBlockingStub>() {
-        @Override
+        @java.lang.Override
         public NewServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new NewServiceBlockingStub(channel, callOptions);
         }
@@ -82,7 +82,7 @@ public final class NewServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<NewServiceFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<NewServiceFutureStub>() {
-        @Override
+        @java.lang.Override
         public NewServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new NewServiceFutureStub(channel, callOptions);
         }
@@ -96,19 +96,19 @@ public final class NewServiceGrpc {
 
     /**
      */
-    public void listNews(NewProto.NewsRequest request,
-                         io.grpc.stub.StreamObserver<NewProto.NewsResponse> responseObserver) {
+    public void listNews(com.zhangyu.news.proto.NewProto.NewsRequest request,
+        io.grpc.stub.StreamObserver<com.zhangyu.news.proto.NewProto.NewsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNewsMethod(), responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListNewsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                NewProto.NewsRequest,
-                NewProto.NewsResponse>(
+                com.zhangyu.news.proto.NewProto.NewsRequest,
+                com.zhangyu.news.proto.NewProto.NewsResponse>(
                   this, METHODID_LIST_NEWS)))
           .build();
     }
@@ -122,7 +122,7 @@ public final class NewServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected NewServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NewServiceStub(channel, callOptions);
@@ -130,8 +130,8 @@ public final class NewServiceGrpc {
 
     /**
      */
-    public void listNews(NewProto.NewsRequest request,
-                         io.grpc.stub.StreamObserver<NewProto.NewsResponse> responseObserver) {
+    public void listNews(com.zhangyu.news.proto.NewProto.NewsRequest request,
+        io.grpc.stub.StreamObserver<com.zhangyu.news.proto.NewProto.NewsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListNewsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -145,7 +145,7 @@ public final class NewServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected NewServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NewServiceBlockingStub(channel, callOptions);
@@ -153,7 +153,7 @@ public final class NewServiceGrpc {
 
     /**
      */
-    public NewProto.NewsResponse listNews(NewProto.NewsRequest request) {
+    public com.zhangyu.news.proto.NewProto.NewsResponse listNews(com.zhangyu.news.proto.NewProto.NewsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListNewsMethod(), getCallOptions(), request);
     }
@@ -167,7 +167,7 @@ public final class NewServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected NewServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NewServiceFutureStub(channel, callOptions);
@@ -175,8 +175,8 @@ public final class NewServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<NewProto.NewsResponse> listNews(
-        NewProto.NewsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.zhangyu.news.proto.NewProto.NewsResponse> listNews(
+        com.zhangyu.news.proto.NewProto.NewsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListNewsMethod(), getCallOptions()), request);
     }
@@ -197,21 +197,21 @@ public final class NewServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_LIST_NEWS:
-          serviceImpl.listNews((NewProto.NewsRequest) request,
-              (io.grpc.stub.StreamObserver<NewProto.NewsResponse>) responseObserver);
+          serviceImpl.listNews((com.zhangyu.news.proto.NewProto.NewsRequest) request,
+              (io.grpc.stub.StreamObserver<com.zhangyu.news.proto.NewProto.NewsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -225,12 +225,12 @@ public final class NewServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     NewServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return NewProto.getDescriptor();
+      return com.zhangyu.news.proto.NewProto.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("NewService");
     }
@@ -250,7 +250,7 @@ public final class NewServiceGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
