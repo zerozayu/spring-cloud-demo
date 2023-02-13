@@ -12,6 +12,7 @@
         <module>spb-server-eureka</module>
         <module>spb-client-eureka</module>
         <module>order-nacos</module>
+        <module>order-feign</module>
         <module>stock-nacos</module>
     </modules>
 
