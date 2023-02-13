@@ -1,5 +1,6 @@
 package com.zhangyu.controller;
 
+import com.zhangyu.feign.ProductFeignService;
 import com.zhangyu.feign.StockFeignService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,15 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/order")
 public class OrderController {
     private final StockFeignService stockFeignService;
+    private final ProductFeignService productFeignService;
 
-    public OrderController(StockFeignService stockFeignService) {
+    public OrderController(StockFeignService stockFeignService, ProductFeignService productFeignService) {
         this.stockFeignService = stockFeignService;
+        this.productFeignService = productFeignService;
     }
 
 
     @GetMapping(value = "/create")
     public String order() {
         String result = stockFeignService.order();
-        return "订单生成成功 By Feign - " + result;
+
+        String product = productFeignService.update();
+        return "订单生成成功 By Feign - " + result + "-" + product;
     }
 }

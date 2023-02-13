@@ -11,3 +11,27 @@ spring:
         username: nacos
         password: nacos
         namespace: public
+
+# spring 的默认日志级别是 info,因此想要 feign 的日志启用,spring 的日志级别也需要开启
+logging:
+  level:
+    com.zhangyu.feign: debug
+
+# feign 日志局部配置
+feign:
+  client:
+    config:
+      # 设置服务的 feign 的日志级别
+      product-service:
+        logger-level: full
+        # 设置为默认的契约（还原成原生注解）
+        contract: feign.Contract.Default
+        # 连接超时时间，默认 2 秒
+        connect-timeout: 5000
+        # 请求处理超时时间，默认 5s，
+        read-timeout: 10000
+      stock-nacos:
+        logger-level: basic
+
+
+
