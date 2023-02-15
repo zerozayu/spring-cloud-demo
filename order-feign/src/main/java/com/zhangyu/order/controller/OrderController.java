@@ -1,7 +1,7 @@
-package com.zhangyu.controller;
+package com.zhangyu.order.controller;
 
-import com.zhangyu.feign.ProductFeignService;
-import com.zhangyu.feign.StockFeignService;
+import com.zhangyu.order.feign.ProductFeignService;
+import com.zhangyu.order.feign.StockFeignService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.zhangyu.feign;
+package com.zhangyu.order.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

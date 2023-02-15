@@ -1,4 +1,4 @@
-package com.zhangyu.feign.interceptor;
+package com.zhangyu.order.feign.interceptor;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;

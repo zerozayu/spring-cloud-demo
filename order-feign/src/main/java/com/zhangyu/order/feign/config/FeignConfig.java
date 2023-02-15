@@ -1,6 +1,6 @@
-package com.zhangyu.feign.config;
+package com.zhangyu.order.feign.config;
 
-import com.zhangyu.feign.interceptor.FeignAuthRequestInterceptor;
+import com.zhangyu.order.feign.interceptor.FeignAuthRequestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

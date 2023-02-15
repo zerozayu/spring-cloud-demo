@@ -15,6 +15,7 @@
         <module>order-feign</module>
         <module>stock-nacos</module>
         <module>product-service</module>
+        <module>config-nacos</module>
     </modules>
 
     <packaging>pom</packaging>

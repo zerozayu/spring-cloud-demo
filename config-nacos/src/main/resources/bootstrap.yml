@@ -1,0 +1,17 @@
+spring:
+  application:
+    # 一定要配置这个名字,否则可能报错
+    name: com.zhangyu.config
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        namespace: dev
+        file-extension: yml
+        # 优先级比 extension-configs 低
+        shared-configs:
+          - data-id: com.zhangyu.config-dev.yml
+            refresh: true
+#        extension-configs:
+#          - data-id: xxx.yml
+#            refresh: true
