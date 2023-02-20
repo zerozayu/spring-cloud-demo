@@ -1,3 +1,7 @@
+## 一. 各个 module 的介绍
+- sentinel-demo: 单独使用不接入使用 sentinel
+- order-sentinel: sentinel 接入 spa
+
 ### nacos java 客户端注意事项
 
 具体参考[nacos 系统参数介绍](https://nacos.io/zh-cn/docs/system-configurations.html) 
