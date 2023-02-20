@@ -29,13 +29,20 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-core</artifactId>
-            <version>1.8.6</version>
+            <version>1.8.5</version>
         </dependency>
         <!--    如果要使用@SentinelResource必须添加此依赖    -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-annotation-aspectj</artifactId>
-            <version>1.8.6</version>
+            <version>1.8.5</version>
+        </dependency>
+
+        <!-- 接入 sentinel 控制台 -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-simple-http</artifactId>
+            <version>1.8.5</version>
         </dependency>
     </dependencies>
 </project>

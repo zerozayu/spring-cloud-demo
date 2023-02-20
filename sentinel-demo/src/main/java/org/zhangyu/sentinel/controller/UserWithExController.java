@@ -3,17 +3,10 @@ package org.zhangyu.sentinel.controller;
 import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.SphU;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.alibaba.csp.sentinel.slots.block.RuleConstant;
-import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
-import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zhangyu.sentinel.domain.User;
-
-import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.zhangyu.sentinel.config.FlowRulesConfig.RESOURCE_NAME;
 
@@ -24,7 +17,6 @@ import static org.zhangyu.sentinel.config.FlowRulesConfig.RESOURCE_NAME;
 @RestController
 @RequestMapping("/user")
 public class UserWithExController {
-
 
     @GetMapping("/hello_with_ex")
     public User sayHelly() {
@@ -40,6 +32,4 @@ public class UserWithExController {
             return new User("限流");
         }
     }
-
-
 }

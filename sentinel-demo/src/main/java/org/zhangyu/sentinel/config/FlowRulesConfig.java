@@ -1,13 +1,11 @@
 package org.zhangyu.sentinel.config;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.annotation.aspectj.SentinelResourceAspect;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -32,7 +30,7 @@ public class FlowRulesConfig {
         FlowRule rule = new FlowRule();
         // 设置受保护的资源
         rule.setResource(RESOURCE_TEST_WITH_ANNOTATION);
-        // 设置流控规则 QPS(每秒查询书)
+        // 设置流控规则 QPS(每秒查询数)
         rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
 
         // 设置受保护的资源阈值
@@ -43,7 +41,7 @@ public class FlowRulesConfig {
         FlowRule rule1 = new FlowRule();
         // 设置受保护的资源
         rule1.setResource(RESOURCE_NAME);
-        // 设置流控规则 QPS(每秒查询书)
+        // 设置流控规则 QPS(每秒查询数)
         rule1.setGrade(RuleConstant.FLOW_GRADE_QPS);
 
         // 设置受保护的资源阈值
