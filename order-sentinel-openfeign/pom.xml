@@ -7,10 +7,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>order-sentinel</artifactId>
+    <artifactId>order-sentinel-openfeign</artifactId>
     <packaging>jar</packaging>
 
-    <name>order-sentinel</name>
+    <name>order-sentinel-openfeign</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -30,19 +30,20 @@
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
 
-        <!-- sentinel 持久化 -->
+        <!-- nacos discovery -->
         <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-nacos</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
-        <!-- <dependency> -->
-        <!--     <groupId>com.alibaba.cloud</groupId> -->
-        <!--     <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId> -->
-        <!-- </dependency> -->
-        <!-- <dependency> -->
-        <!--     <groupId>org.springframework.cloud</groupId> -->
-        <!--     <artifactId>spring-cloud-starter-bootstrap</artifactId> -->
-        <!-- </dependency> -->
+        <!-- openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
     </dependencies>
 </project>

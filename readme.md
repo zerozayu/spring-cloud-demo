@@ -1,6 +1,7 @@
 ## 一. 各个 module 的介绍
 - sentinel-demo: 单独使用不接入使用 sentinel
 - order-sentinel: sentinel 接入 spa
+- order-sentinel-openfeign: 整合 sentinel 和 openfeign
 
 ### nacos java 客户端注意事项
 

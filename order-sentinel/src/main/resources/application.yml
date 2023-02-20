@@ -7,3 +7,17 @@ spring:
     sentinel:
       transport:
         dashboard: 127.0.0.1:8858
+      # 默认将调用链路收敛, 导致链路流控效果无效
+      web-context-unify: false
+      datasource:
+        ds1: # 可自定义
+          nacos:
+            server-addr: 127.0.0.1:8848
+            username: nacos
+            password: nacos
+            namespace: dev
+            group-id: SENTINEL_GROUP
+            data-id: order-sentinel-flow-rule.json
+            data-type: json
+            rule-type: flow
+

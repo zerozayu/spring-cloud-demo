@@ -20,4 +20,10 @@ public class StockController {
     public String order() {
         return "库存更新成功 - 端口号:  " + port;
     }
+
+    @GetMapping(value = "/update1")
+    public String order1() {
+        int a = 1 / 0;
+        return "ok";
+    }
 }
