@@ -1,0 +1,53 @@
+server:
+  port: 11000
+spring:
+  application:
+    name: stock-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata-stock?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: dev
+        username: nacos
+        password: nacos
+        group: SEATA_GROUP
+seata:
+  tx-service-group: default_tx_group
+  registry:
+    # 必须指定 type
+    type: nacos
+    # 配置 seata 的注册中心,告诉 seata client 怎么去访问 seata server(TC)
+    nacos:
+      server-addr: 127.0.0.1:8848 # seata server 所在的服务地址
+      application: seata-server # seata server 的服务名 seata-server,如果没有修改可以不配
+      group: SEATA_GROUP # seata server 所在的分组,默认就是 SEATA_GROUP
+      namespace: dev # seata-server 的命名空间
+      username: nacos
+      password: nacos
+
+  config:
+    # 必须指定 type
+    type: nacos
+    # 配置 seata 配置中心, 可以读取关于 seata client 的一些配置
+    nacos:
+      namespace: dev
+      group: SEATA_GROUP
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+
+
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

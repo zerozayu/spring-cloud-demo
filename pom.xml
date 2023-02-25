@@ -18,6 +18,7 @@
         <module>stock-nacos</module>
         <module>product-service</module>
         <module>config-nacos</module>
+        <module>seata</module>
     </modules>
 
     <packaging>pom</packaging>

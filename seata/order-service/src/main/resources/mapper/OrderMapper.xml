@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 命名空间，与 Mapper 接口的全限定名一致 -->
+<mapper namespace="com.zhangyu.order.mapper.OrderMapper">
+
+    <insert id="create" parameterType="com.zhangyu.order.domain.Order" useGeneratedKeys="true" keyProperty="id">
+        insert into tbl_order(product_id, total_amount, status)
+        values (#{productId}, #{totalAmount}, #{status})
+        <!-- 指定结果类型resultType，keyProperty是属性，自动返回到属性id中，order是次序，after是指获取id是在于插入后 -->
+        <!-- <selectKey resultType="int" keyProperty="id" order="AFTER"> -->
+        <!--     select @@identity -->
+        <!-- </selectKey> -->
+        <selectKey resultType="int" keyProperty="id" order="AFTER">
+            select LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+</mapper>
