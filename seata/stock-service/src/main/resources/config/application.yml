@@ -19,6 +19,8 @@ spring:
         password: nacos
         group: SEATA_GROUP
 seata:
+  # 会读取 nacos 配置中心的 dataid 为 service.vgroupMapping.default_tx_group(默认值为default)的配置
+  # default 是 seata 服务端的 application.yml 配置文件中 seata.registry.nacos.cluster: default 的值
   tx-service-group: default_tx_group
   registry:
     # 必须指定 type
@@ -31,7 +33,6 @@ seata:
       namespace: dev # seata-server 的命名空间
       username: nacos
       password: nacos
-
   config:
     # 必须指定 type
     type: nacos

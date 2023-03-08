@@ -19,6 +19,8 @@
         <module>product-service</module>
         <module>config-nacos</module>
         <module>seata</module>
+        <module>common</module>
+        <module>gateway</module>
     </modules>
 
     <packaging>pom</packaging>
